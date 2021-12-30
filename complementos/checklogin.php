@@ -15,14 +15,14 @@ $query = "SELECT * FROM login WHERE usuario =   '$user'  AND clave =    '$pass'"
 $resultado=$nuevaConexion->ejecutar($query);
 $fila=$nuevaConexion->ultimorenglon($resultado);
 
-//echo "<pre>";
-//var_dump($fila);
-//echo "<pre>";
+echo "<pre>";
+var_dump($fila);
+echo "<pre>";
 
-/*
+
 echo $fila[0]['usuario'];
 echo "<br>";
-*/
+
 foreach($fila as $row1){
      $row1['usuario'];
      $row1['clave'];

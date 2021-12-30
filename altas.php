@@ -22,7 +22,7 @@
    
 
    <?php include 'plantillas/cabeza_cruds.php'; ?>
-   <?php include 'plantillas/form_ingreso.php'; ?>
+   <?php include 'plantillas/form_alta.php'; ?>
    <?php include 'plantillas/pie.php'; ?>
    
 
