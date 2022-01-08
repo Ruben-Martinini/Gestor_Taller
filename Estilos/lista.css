@@ -1,0 +1,23 @@
+#container-lista{
+    
+    position: absolute;
+    top: 100px;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.marco-lista{
+    width: 100%;
+    
+}
+.marco-tabla{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.tabla{
+    justify-content: center;
+}
+
+
+

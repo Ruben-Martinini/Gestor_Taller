@@ -1,7 +1,7 @@
  <!-- inicio  de main-->
  <section class="container-padre" style="background-image: url('Imgs/manipulador.jpg');">
         <div class="cuad filter" >
-                <form action="/complementos/checklogin.php" onsubmit="return validar()" method="POST">
+                <form action="checklogin.php" onsubmit="return validar()" method="POST">
                     <div>
                     <h5 style="color: black;">Acceso Sistema de Gestión del Taller</h5>
                     </div>

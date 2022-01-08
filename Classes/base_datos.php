@@ -26,10 +26,10 @@ class BaseDatos
         if($this->conn->connect_errno)
         {
             die("Error de  conexión: (" . $this->conn->connect_error . ") " . $this->conn->connect_errno);
-        } else {
+        } /*else {
             echo "se conecto ok";
             echo "<br>";
-        }
+        }*/
     }
 
     public function cerrarBD()

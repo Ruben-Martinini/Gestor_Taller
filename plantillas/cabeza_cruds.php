@@ -24,10 +24,16 @@
                 </ul>
             </li>
               
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active azul" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <?php echo $_SESSION['usuario'] ?>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <li><a class="nav-link active " href="logout.php" target="_self">Salir</a></li>
+                    
+                </ul>
+            </li>
             
-              <li class="nav-item">
-                <a class="nav-link active azul" href="#" target="_blank">Salir</a>
-              </li>
               
             </ul>
             
