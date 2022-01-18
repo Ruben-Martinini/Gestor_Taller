@@ -72,8 +72,8 @@ else{
 <body>
    
 
-   <?php include 'plantillas/cabeza_cruds.php'; ?>
-   <?php include 'plantillas/form_lista.php'; ?>
+   <?php include 'plantillas/cabezaInv.php'; ?>
+   <?php include 'plantillas/form_listaInv.php'; ?>
    <?php include 'plantillas/pie.php'; ?>
     
   

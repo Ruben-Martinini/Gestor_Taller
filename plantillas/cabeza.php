@@ -21,7 +21,7 @@
                     </li>
                 
                     <li class="nav-item">
-                    <a class="nav-link active azul" href="#" target="_blank">INGRESAR</a>
+                    <a class="nav-link active azul" href="#" target="_self">INGRESAR</a>
                     </li>
                     
                 </ul>

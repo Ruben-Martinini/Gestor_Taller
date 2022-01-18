@@ -1,45 +1,43 @@
 <?php
-
-//guardo variable de referencia pagina anterior
-$refer = $_SERVER['HTTP_REFERER'];
-
-
+$refer = $_SERVER['HTTP_REFERER'];//guardo variable de referencia pagina anterior
 
 $user = $_POST['usuario'];
 $pass = $_POST['clave'];
 
-require("./Classes/base_datos.php");
 
-$nuevaConexion = new BaseDatos();
-$nuevaConexion->conecta();
+require("./Classes/Cruds_Repuestos.php");
+
+$nuevaConexion = new CrudsRepuestos();
+
 
 $query = "SELECT * FROM login WHERE usuario = '$user'  AND clave = '$pass'"  ;
 
 
-$resultado=$nuevaConexion->ejecutar($query);
-$fila=$nuevaConexion->ultimorenglon($resultado);
+$resultado=$nuevaConexion->Ejecutar($query);
+$fila=$nuevaConexion->ObtenerFilas($resultado);
 
 
-foreach($fila as $row1){
-     $row1['usuario'];
-     $row1['clave'];
+if($fila){
+    session_start();//creo sesion 
+    $_SESSION['usuario'] = $_POST['usuario'];//Guardo variable de sesion 
+   
+    $tipoUsuario;
+                
+     
+         echo $tipoUsuario = $fila[3];
+          
+      
+      if(isset($tipoUsuario) && $tipoUsuario==1){
+        header('Location: busqueda.php');
+        die();
+      }else{
+        header('Location: busquedaInv.php');
+        die();
+      }
+} else{
+  // "usuario o contraseña incorrecto"
+  header("Location: $refer");
+  die();
 }
-
-if(isset($row1['usuario'] )&& isset($row1['clave'])){
-   //creo sesion 
-    session_start();
-  //Guardo variable de sesion 
-  $_SESSION['usuario'] = $_POST['usuario'];
-  
-    header('Location: busqueda.php');
-    die();
-}else{
-    // "usuario o contraseña incorrecto"
-    header("Location: $refer");
-    die();
-}
-
-
-
 
 ?>

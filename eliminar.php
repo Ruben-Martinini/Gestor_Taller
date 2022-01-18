@@ -4,7 +4,26 @@ if(!isset($_SESSION['usuario'])){
    header('location: login.php');
    die();
 }
-$operacion="ALTA REPUESTO";
+$operacion="ELIMINAR";
+$id=$_GET['id']; // variable pasada desde listado para editar registro con ese id.
+
+require("./Classes/Cruds_Repuestos.php");
+$nuevaConexion = new CrudsRepuestos();
+$query = "SELECT nro_parte , designacion , aplicacion , ubicacion , marca , cantidad FROM repuestos WHERE id_repuesto like '$id' ";
+   $resultado=$nuevaConexion->Ejecutar($query);
+   if($resultado){
+                
+      while($tabla = $nuevaConexion->ObtenerFilas($resultado)){
+         
+         $nro = $tabla[0];
+         $des = $tabla[1];
+         $apl = $tabla[2];
+         $ubc = $tabla[3];
+         $mar = $tabla[4];
+         $can = $tabla[5];
+      }
+      $nuevaConexion->LimpiarResultado($resultado);
+   }
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -30,7 +49,7 @@ $operacion="ALTA REPUESTO";
    
 
    <?php include 'plantillas/cabeza_cruds.php'; ?>
-   <?php include 'plantillas/form_alta.php'; ?>
+   <?php include 'plantillas/form_eliminar.php'; ?>
    <?php include 'plantillas/pie.php'; ?>
    
 

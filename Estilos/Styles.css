@@ -16,9 +16,17 @@ nav img{
     
 }
 
+
 #navbarSupportedContent a{
     font-size: large;
 }
+/*.imgRedonda {
+    width:32px;
+    height:32px;
+    border-radius:16px;
+    background-color: rgb(25, 216, 25);
+    border:3px solid rgb(122, 165, 221);
+}*/
 
 .navbar-dark .navbar-nav .nav-link.active.azul{
     color: #0d6efd;
@@ -26,6 +34,7 @@ nav img{
 .navbar>.container-fluid{
     margin-left: 15%;
     margin-right: 15%;
+    align-items: baseline;
 }
 
 .container-fluid{
@@ -34,6 +43,11 @@ nav img{
 }
 .navbar{
     border-bottom: 1px solid white;
+}
+
+.contain-check-marcas{
+    display: flex;
+    justify-content: space-around;
 }
 
 .container-padre{
@@ -99,12 +113,10 @@ input:hover{
     background-color: lightskyblue;
 }
 
-a:hover{
-    text-decoration: underline;
-}
-
-
 @media (max-width: 992px) {
+    .texto-operacion{
+        font-size: small;
+    }
     /* Login */
     .cuad{
         width: 80%;
@@ -123,6 +135,10 @@ a:hover{
     }
     .navbar-brand, #navbarSupportedContent a{
         font-size: small;
+    }
+
+    .tipo-operacion p{
+       font-size: x-small;
     }
 
     .navbar>.container-fluid{

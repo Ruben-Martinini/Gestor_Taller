@@ -1,8 +1,7 @@
-<!--Inicio de form Altas-->
+<!--Inicio de form Busqueda-->
 <section class="marco-principal">
+<form class="row g-3 cont-form-insert" action="listadoInv.php"  method="post">
 
-<form class="row g-3 cont-form-insert" action="resultInsert.php"  method="post">
-  
 <div class="contain-check-marcas">
   <div class="form-check-inline">
   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Polaris">
@@ -18,8 +17,17 @@
   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Honda">
   <label class="form-check-label" for="inlineRadio3">Honda</label>
   </div>
+
+  <div class="form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4"  checked>
+  <label class="form-check-label" for="inlineRadio4"></label>
+  </div>
 </div>
 
+
+
+
+  
   <div class="col-md-6">
     <label for="inputNparte" class="form-label">N° de Parte</label>
     <input type="text" class="form-control" name="nroparte" id="inputNparte">
@@ -43,15 +51,13 @@
   
 
 
-  <div class="col-6 col-sm-9 col-xl-10">
-    <button type="submit" class="btn btn-primary">Ingresar</button>
+  <div class="col-10">
+    <button type="submit" class="btn btn-primary">Buscar</button>
   </div>
 
-  <div class="col-6 col-sm-3 col-xl-2">   
-    <input type="number" class="form-control" name="cantidad"  placeholder="Cantidad">
-  </div>
+ 
 
 </form>
 
 </section>    
-<!--fin de form Altas-->
+<!--fin de form busqueda-->

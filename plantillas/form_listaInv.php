@@ -45,10 +45,10 @@
                   <td class="centrado"><?php echo $tabla[4]; ?></td>
                   <td><?php echo $tabla[5]; ?></td>
                   <td class="centrado"><?php echo $tabla[6]; ?></td>
-                  <td class="centrado"><a href="edicion.php?id=<?php echo $tabla[0]; ?>" target="_SELF">
+                  <td class="centrado"><a href="#" target="_SELF">
                   <i class="far fa-edit"></i>
                   </a></td>
-                  <td class="centrado"><a href="eliminar.php?id=<?php echo $tabla[0]; ?>" target="_SELF">
+                  <td class="centrado"><a href="#" target="_SELF">
                   <i class="far fa-trash-alt"></i>
                   </a></td>
               </tr>

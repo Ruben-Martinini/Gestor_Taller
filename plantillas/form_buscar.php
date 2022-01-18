@@ -17,6 +17,11 @@
   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Honda">
   <label class="form-check-label" for="inlineRadio3">Honda</label>
   </div>
+
+  <div class="form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4"  checked>
+  <label class="form-check-label" for="inlineRadio4"></label>
+  </div>
 </div>
 
 
@@ -47,7 +52,7 @@
 
 
   <div class="col-10">
-    <button type="submit" class="btn btn-primary">Ingresar</button>
+    <button type="submit" class="btn btn-primary">Buscar</button>
   </div>
 
  
