@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['usuario'])){
-   header('location: login.php');
+   header('location: index.php');
    die();
 }
 $operacion="ALTA REPUESTO";
@@ -33,7 +33,7 @@ $operacion="ALTA REPUESTO";
    <?php include 'plantillas/form_alta.php'; ?>
    <?php include 'plantillas/pie.php'; ?>
    
-
+   <script src="js/alta.js"></script>
    
 </body>
 

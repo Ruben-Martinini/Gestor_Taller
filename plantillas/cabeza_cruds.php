@@ -20,7 +20,7 @@
                   <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                       <li><a class="dropdown-item" href="busqueda.php">Buscar Repuestos</a></li>
                       <li><a class="dropdown-item" href="altas.php">Alta Repuestos</a></li>
-                      <li><a class="dropdown-item" href="#">Buscar x Ubicación</a></li>
+                      <li><a class="dropdown-item" href="busquedaXdestino.php">Buscar x Ubicación</a></li>
                   </ul>
               </li>
                 

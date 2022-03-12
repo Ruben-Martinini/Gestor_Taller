@@ -21,10 +21,10 @@ if($fila){
     session_start();//creo sesion 
     $_SESSION['usuario'] = $_POST['usuario'];//Guardo variable de sesion 
    
-    $tipoUsuario;
+      $tipoUsuario;
                 
      
-         echo $tipoUsuario = $fila[3];
+         $tipoUsuario = $fila[3];
           
       
       if(isset($tipoUsuario) && $tipoUsuario==1){
@@ -35,8 +35,7 @@ if($fila){
         die();
       }
 } else{
-  // "usuario o contraseña incorrecto"
-  header("Location: $refer");
+  header("Location: $refer"); // "usuario o contraseña incorrecto"
   die();
 }
 

@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['usuario'])){
-   header('location: login.php');
+   header('location: index.php');
    die();
 }
 $operacion="ELIMINAR";
@@ -9,7 +9,7 @@ $id=$_GET['id']; // variable pasada desde listado para editar registro con ese i
 
 require("./Classes/Cruds_Repuestos.php");
 $nuevaConexion = new CrudsRepuestos();
-$query = "SELECT nro_parte , designacion , aplicacion , ubicacion , marca , cantidad FROM repuestos WHERE id_repuesto like '$id' ";
+$query = "SELECT r.nro_parte , r.designacion , r.aplicacion , r.ubicacion , r.marca ,  (d.dp1 + d.dp2 + d.dp3)cantidad FROM repuestos r, destino_repuestos d WHERE id_repuesto like '$id' AND r.id_repuesto = d.repuesto_id ";
    $resultado=$nuevaConexion->Ejecutar($query);
    if($resultado){
                 

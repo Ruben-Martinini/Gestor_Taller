@@ -3,22 +3,15 @@
 
 <form class="row g-3 cont-form-insert" action="resultUpdate.php?id=<?php echo $id; ?>"  method="post">
   
-<div class="contain-check-marcas" >
-  <div class="form-check-inline" >
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Polaris" <?php if(strtoupper($mar) == "POLARIS"){echo 'checked';} ?>>
-  <label class="form-check-label" for="inlineRadio1">Polaris</label>
-  </div>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-secondary col-4 " data-bs-toggle="modal" data-bs-target="#exampleModal" id="botonMarcaModelo" >
+    <?php echo $mar; ?>
+    </button>
+    <div class="col-8 ">    
+    <input type="text" class="form-control" name="marca_modelo" id="inputModelo" value="<?php echo $modelosEdic; ?>"  disabled>
+    </div>
 
-  <div class="form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Mercury" <?php if(strtoupper($mar) == "MERCURY"){echo 'checked';} ?>>
-  <label class="form-check-label" for="inlineRadio2">Mercury</label>
-  </div>
-
-  <div class="form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Honda" <?php if(strtoupper($mar) == "HONDA"){echo 'checked';} ?>>
-  <label class="form-check-label" for="inlineRadio3">Honda</label>
-  </div>
-</div>
+    <?php include 'plantillas/modal_alta.php'; ?>
 
   <div class="col-md-6">
     <label for="inputNparte" class="form-label">N° de Parte</label>
@@ -46,11 +39,6 @@
   <div class="col-6 col-sm-9 col-xl-10">
     <button type="submit" class="btn btn-primary">Editar</button>
   </div>
-
-  <div class="col-6 col-sm-3 col-xl-2">   
-    <input type="number" class="form-control" name="cantidad"  value="<?php echo $can; ?>">
-  </div>
-
 </form>
 
 </section>    

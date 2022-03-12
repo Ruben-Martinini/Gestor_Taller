@@ -19,8 +19,9 @@
                   </a>
                   <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                       <li><a class="dropdown-item" href="busquedaInv.php">Buscar Repuestos</a></li>
-                      <li><a class="dropdown-item" href="#">Alta Repuestos</a></li>
-                      <li><a class="dropdown-item" href="#">Baja Repuestos</a></li>
+                   <!--   <li><a class="dropdown-item" href="#">Alta Repuestos</a></li>
+                          <li><a class="dropdown-item" href="#">Baja Repuestos</a></li>  
+                    -->   
                   </ul>
               </li>
                 

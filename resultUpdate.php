@@ -5,12 +5,13 @@ $id=$_GET['id'];
 
 require ("./Classes/Cruds_Repuestos.php");
  
-$mar = $_POST['inlineRadioOptions'];
+$mar = $_POST['bgrMarca'];
+
 $nro = $_POST['nroparte'];
 $apl = $_POST['aplica'];
 $des = $_POST['designa'];
 $ubc = $_POST['ubica'];
-$can = $_POST['cantidad'];
+//$can = $_POST['cantidad'];
 $usu;
 
 switch ($_SESSION['usuario']) {
@@ -30,7 +31,7 @@ switch ($_SESSION['usuario']) {
 $nuevaConexion = new CrudsRepuestos();
 
 
-$query="UPDATE repuestos SET nro_parte = '$nro', designacion = '$des' , aplicacion = '$apl' , ubicacion = '$ubc' , marca = '$mar' , cantidad = '$can', usuario_id = '$usu' WHERE id_repuesto = '$id'";
+$query="UPDATE repuestos SET nro_parte = '$nro', designacion = '$des' , aplicacion = '$apl' , ubicacion = '$ubc' , marca = '$mar' , usuario_id = '$usu' WHERE id_repuesto = '$id'";
 
 $resul=$nuevaConexion->Ejecutar($query);
     if($resul){
@@ -38,7 +39,7 @@ $resul=$nuevaConexion->Ejecutar($query);
         $RowCount =  $nuevaConexion->CantFilasAfectadas();
         if($RowCount > 0){
            
-        $query = "SELECT id_repuesto , nro_parte , designacion , aplicacion , ubicacion , marca , cantidad FROM repuestos WHERE nro_parte like '$nro' ";
+        $query = "SELECT r.id_repuesto , r.nro_parte , r.designacion , r.aplicacion , r.ubicacion , r.marca ,  (d.dp1 + d.dp2 + d.dp3)cantidad FROM repuestos r, destino_repuestos d WHERE r.id_repuesto = '$id' AND r.id_repuesto = d.repuesto_id";
          $resultado=$nuevaConexion->Ejecutar($query);
          
         }
