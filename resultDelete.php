@@ -30,18 +30,21 @@ switch ($_SESSION['usuario']) {
 $nuevaConexion = new CrudsRepuestos();
 
 
-$query="DELETE FROM repuestos WHERE id_repuesto ='$id'";
+$query="DELETE FROM destino_repuestos WHERE repuesto_id ='$id'";
 
 $resul=$nuevaConexion->Ejecutar($query);
     if($resul){
-       
-        $RowCount =  $nuevaConexion->CantFilasAfectadas();
-        if($RowCount > 0){
-           
-        $query = "SELECT id_repuesto , nro_parte , designacion , aplicacion , ubicacion , marca , cantidad FROM repuestos WHERE id_repuesto = '$id' ";
-         $resultado=$nuevaConexion->Ejecutar($query);
-         
-        }
+        $query="DELETE FROM repuestos WHERE id_repuesto ='$id'";
+        $resul=$nuevaConexion->Ejecutar($query);
+            if($resul){
+                $RowCount =  $nuevaConexion->CantFilasAfectadas();
+                if($RowCount > 0){
+                
+                $query = "SELECT id_repuesto , nro_parte , designacion , aplicacion , ubicacion , marca , cantidad FROM repuestos WHERE id_repuesto = '$id' ";
+                $resultado=$nuevaConexion->Ejecutar($query);
+                
+                }
+            }
     }  
 
 ?>
