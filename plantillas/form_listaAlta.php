@@ -78,7 +78,7 @@
                   <td class="centrado"><a href="edicionAlta.php?id=<?php echo $tabla[0]; ?>&pol=<?php echo serialize($P); ?>&mer=<?php echo serialize($M); ?>&hon=<?php echo serialize($H); ?>" target="_SELF">
                   <i class="far fa-edit"></i>
                   </a></td>
-                  <td class="centrado"><a href="eliminarAlta.php?id=<?php echo $tabla[0]; ?>" target="_SELF">
+                  <td class="centrado"><a href="eliminarAlta.php?id=<?php echo $tabla[0]; ?>&pol=<?php echo serialize($P); ?>&mer=<?php echo serialize($M); ?>&hon=<?php echo serialize($H); ?>" target="_SELF">
                   <i class="far fa-trash-alt"></i>
                   </a></td>
               </tr>
