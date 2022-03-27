@@ -4,13 +4,14 @@ $operacion = "Repuesto eliminado";
 $id=$_GET['id'];
 
 require ("./Classes/Cruds_Repuestos.php");
- 
+/* 
 $mar = $_POST['inlineRadioOptions'];
 $nro = $_POST['nroparte'];
 $apl = $_POST['aplica'];
 $des = $_POST['designa'];
 $ubc = $_POST['ubica'];
 $can = $_POST['cantidad'];
+*/
 $usu;
 
 switch ($_SESSION['usuario']) {
@@ -31,22 +32,27 @@ $nuevaConexion = new CrudsRepuestos();
 
 
 $query="DELETE FROM destino_repuestos WHERE repuesto_id ='$id'";
-
 $resul=$nuevaConexion->Ejecutar($query);
-    if($resul){
-        $query="DELETE FROM repuestos WHERE id_repuesto ='$id'";
-        $resul=$nuevaConexion->Ejecutar($query);
-            if($resul){
+
+if($resul){
+    $query1=" DELETE FROM modelo_repuesto  WHERE repuesto_id = '$id'";
+    $resul1=$nuevaConexion->Ejecutar($query1);
+
+    if($resul1){
+        $query2="DELETE FROM repuestos WHERE id_repuesto ='$id'";
+        $resul2=$nuevaConexion->Ejecutar($query2);
+            if($resul2){
                 $RowCount =  $nuevaConexion->CantFilasAfectadas();
                 if($RowCount > 0){
                 
-                $query = "SELECT id_repuesto , nro_parte , designacion , aplicacion , ubicacion , marca , cantidad FROM repuestos WHERE id_repuesto = '$id' ";
-                $resultado=$nuevaConexion->Ejecutar($query);
+                    $query = "SELECT r.id_repuesto , r.nro_parte , r.designacion , r.aplicacion , r.ubicacion , m.marca , m.SPORTMAN_500_4x2, m.SPORTMAN_500_4x4, m.SPORTMAN_570_4x4, m.RANGER_700_4x4, m.RANGER_700_6x6, m.RANGER_900_4x4, m.IQ_600, m.LX_500, m.LX_550, m.120_PRO, m.25HP_2CYL, m.40HP_2CYL, m.40HP_3CYL, m.50HP_2CYL, m.50HP_3CYL, m.150HP_6CYL, m.U1000, m.U2000, m.EG6500, m.ET12000, m.WB_20XH, m.WB_20XT, d.dp1  FROM repuestos r, destino_repuestos d, modelo_repuesto m WHERE r.nro_parte = '$nro' AND r.id_repuesto = d.repuesto_id  AND r.id_repuesto = m.repuesto_id ";
+                    $resultado=$nuevaConexion->Ejecutar($query);
+
                 
                 }
             }
     }  
-
+}
 ?>
 
 

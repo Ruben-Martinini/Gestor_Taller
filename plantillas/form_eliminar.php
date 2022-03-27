@@ -1,57 +1,50 @@
-<!--Inicio de form Altas-->
+<!--Inicio de form Eliminar-->
 <section class="marco-principal">
 
-<form class="row g-3 cont-form-insert" action="resultDelete.php?id=<?php echo $id; ?>"  method="post">
-  
-<div class="contain-check-marcas" >
-  <div class="form-check-inline" >
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Polaris" <?php if(strtoupper($mar) == "POLARIS"){echo 'checked';} ?>>
-  <label class="form-check-label" for="inlineRadio1">Polaris</label>
-  </div>
+<form class="row g-3 cont-form-insert" action="resultDelete.php?id=<?php echo $id; ?>" onsubmit="return alertEliminar()" method="post">
+  <!-- Button trigger modal -->
 
-  <div class="form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Mercury" <?php if(strtoupper($mar) == "MERCURY"){echo 'checked';} ?>>
-  <label class="form-check-label" for="inlineRadio2">Mercury</label>
-  </div>
+    <div class="col-12 col-md-2 col-xl-4 ">    
+    <input type="text" class="form-control" name="IMarca" id="inputMarca" value="<?php echo $mar; ?>"  disabled>
+    </div>
+    <div class="col-12 col-md-10 col-xl-8">    
+    <input type="text" class="form-control" name="marca_modelo" id="inputModelo" value="<?php echo $modelosEdic; ?>"  disabled>
+    </div>
 
-  <div class="form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Honda" <?php if(strtoupper($mar) == "HONDA"){echo 'checked';} ?>>
-  <label class="form-check-label" for="inlineRadio3">Honda</label>
-  </div>
-</div>
+    
 
   <div class="col-md-6">
     <label for="inputNparte" class="form-label">N° de Parte</label>
-    <input type="text" class="form-control" name="nroparte" id="inputNparte" value="<?php echo $nro; ?>">
+    <input type="text" class="form-control" name="nroparte" id="inputNparte" value="<?php echo $nro; ?>" disabled>
   </div>
 
   <div class="col-md-6">
     <label for="inputDesignacion" class="form-label">Designación</label>
-    <input type="text" class="form-control" name="designa" id="inputDesignacion" value="<?php echo $des; ?>">
+    <input type="text" class="form-control" name="designa" id="inputDesignacion" value="<?php echo $des; ?>" disabled>
   </div>
 
   <div class="col-12">
     <label for="inputAplicacion" class="form-label">Aplicación</label>
-    <input type="text" class="form-control" name="aplica" id="inputAplicacion" value="<?php echo $apl; ?>">
+    <input type="text" class="form-control" name="aplica" id="inputAplicacion" value="<?php echo $apl; ?>" disabled>
   </div>
 
 
-  <div class="col-12">
-    <label for="inputUbicacion" class="form-label">Ubicación </label>
-    <input type="text" class="form-control" name="ubica" id="inputUbicacion" value="<?php echo $ubc; ?>">
+  <div class="col-6 col-sm-4 col-xl-2">
+  <label for="inputUbicacion" class="form-label">Ubicación</label>
+    <input type="text" class="form-control" name="ubica" id="inputUbicacion" placeholder="Coordenadas" value="<?php echo $ubc; ?>" disabled>
   </div>
+
+  <div class="col-6 col-sm-4 col-xl-2">
+    <label for="inputCantidad" class="form-label">Cantidad</label>
+    <input type="number" class="form-control" name="cantidad" id="inputCantidad" placeholder="Cantidad" value="<?php echo $can; ?>" disabled>
+  </div>
+
+  <div class="col-6 col-sm-4 col-xl-12 align-self-end">
   
-
-
-  <div class="col-6 col-sm-9 col-xl-10">
-    <button type="submit" class="btn btn-primary">Eliminar</button>
-  </div>
-
-  <div class="col-6 col-sm-3 col-xl-2">   
-    <input type="number" class="form-control" name="cantidad"  value="<?php echo $can; ?>">
+    <button type="submit" name="submitEliminar" class="btn btn-primary">Eliminar</button>
   </div>
 
 </form>
 
 </section>    
-<!--fin de form Altas-->
+<!--fin de form Eliminar-->

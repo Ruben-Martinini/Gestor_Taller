@@ -32,7 +32,8 @@
    <?php include 'plantillas/cabeza_cruds.php'; ?>
    <?php include 'plantillas/form_buscar.php'; ?>
    <?php include 'plantillas/pie.php'; ?>
-    
+   
+   <script src="js/alta.js"></script> 
   
 </body>
 </html>

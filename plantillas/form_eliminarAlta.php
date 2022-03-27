@@ -1,7 +1,7 @@
-<!--Inicio de form Altas-->
+<!--Inicio de form Eliminar-->
 <section class="marco-principal">
 
-<form class="row g-3 cont-form-insert" action="resultDeleteAlta.php?id=<?php echo $id; ?>"  method="post">
+<form class="row g-3 cont-form-insert" action="resultDeleteAlta.php?id=<?php echo $id; ?>" onsubmit="return alertEliminar()" method="post">
   <!-- Button trigger modal -->
 <button type="button" class="btn btn-secondary col-4 col-md-2 col-xl-2 " data-bs-toggle="modal" name="bgrMarca"
 data-bs-target="#exampleModal" id="botonMarcaModelo" disabled>
@@ -61,4 +61,4 @@ data-bs-target="#exampleModal" id="botonMarcaModelo" disabled>
 </form>
 
 </section>    
-<!--fin de form Altas-->
+<!--fin de form Eliminar-->

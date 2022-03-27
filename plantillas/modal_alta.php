@@ -112,7 +112,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary" onclick="cargaModelos()" data-bs-dismiss="modal">Aceptar</button>
+        <button type="button" class="btn btn-primary" onclick="cargaModelos()" data-bs-dismiss="modal" name="mMestablecidos">Aceptar</button>
       </div>
     </div>
   </div>

@@ -1,13 +1,17 @@
 <!--Inicio de form Altas-->
 <section class="marco-principal">
 
-<form class="row g-3 cont-form-insert" action="resultUpdate.php?id=<?php echo $id; ?>"  method="post">
+<form class="row g-3 cont-form-insert" action="resultUpdate.php?id=<?php echo $id; ?>"  method="POST">
   
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-secondary col-4 " data-bs-toggle="modal" data-bs-target="#exampleModal" id="botonMarcaModelo" >
-    <?php echo $mar; ?>
+<button type="button" class="btn btn-secondary col-4 col-md-2 col-xl-2 " data-bs-toggle="modal" 
+data-bs-target="#exampleModal" id="botonMarcaModelo" >
+    Marca-Modelo
     </button>
-    <div class="col-8 ">    
+    <div class="col-8 col-md-2 col-xl-4 ">    
+    <input type="text" class="form-control" name="IMarca" id="inputMarca" value="<?php echo $mar; ?>"  disabled>
+    </div>
+    <div class="col-12 col-md-8 col-xl-6">    
     <input type="text" class="form-control" name="marca_modelo" id="inputModelo" value="<?php echo $modelosEdic; ?>"  disabled>
     </div>
 

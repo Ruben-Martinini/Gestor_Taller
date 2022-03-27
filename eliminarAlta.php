@@ -89,7 +89,7 @@ m.RANGER_900_4x4 , m.IQ_600, m.LX_500 , m.LX_550 , m.120_PRO , m.25HP_2CYL , m.4
    <?php include 'plantillas/form_eliminarAlta.php'; ?>
    <?php include 'plantillas/pie.php'; ?>
    
-   
+   <script src="js/alertas.js"></script>
    
 </body>
 

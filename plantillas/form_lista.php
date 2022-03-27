@@ -52,7 +52,7 @@
                     if($tabla[7]==1){echo "S500.4x4|";}
                     if($tabla[8]==1){echo "S570.4x4|";}
                     if($tabla[9]==1){echo "R700.4x4|";}
-                    if($tabla[10]==1){echo "R700.6x6|";};
+                    if($tabla[10]==1){echo "R700.6x6|";}
                     if($tabla[11]==1){echo "R900.4x4|";}
                     if($tabla[12]==1){echo "IQ|";}
                     if($tabla[13]==1){echo "LX500|";}
@@ -63,7 +63,7 @@
                     if($tabla[17]==1){echo "40HP.2C|";}
                     if($tabla[18]==1){echo "40HP.3C|";}
                     if($tabla[19]==1){echo "50HP.2C|";}
-                    if($tabla[20]==1){echo "50HP.3C|";};
+                    if($tabla[20]==1){echo "50HP.3C|";}
                     if($tabla[21]==1){echo "150HP.6C|";}
                     //impresión de modelos Honda
                     if($tabla[22]==1){echo "U1000|";}
@@ -75,7 +75,7 @@
                   
                   ?></td>
                   <td class="centrado"><?php echo $tabla[28]; ?></td>
-                  <td class="centrado"><a href="edicion.php?id=<?php echo $tabla[0]; ?>" target="_SELF">
+                  <td class="centrado"><a href="edicion.php?id=<?php echo $tabla[0]; ?> " target="_SELF">
                   <i class="far fa-edit"></i>
                   </a></td>
                   <td class="centrado"><a href="eliminar.php?id=<?php echo $tabla[0]; ?>" target="_SELF">
