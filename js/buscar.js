@@ -1,4 +1,3 @@
-
 function establecerMarca(){
 
     var marca = document.getElementsByName('bgrMarca');
@@ -89,13 +88,10 @@ function cargaModelos(){
     }
      
 }
-function eligeA(){
-var AdqElegida= document.getElementById('formAdqElegida').value;
 
-document.getElementById('inputFormaAdquisicion').value = AdqElegida;
-}
 
-function validar() {
+
+function validarB() {
     //obtengo los valores de los campos del formulario de alta
       
     var inMod = document.getElementById('inputModelo').value
@@ -103,13 +99,13 @@ function validar() {
     var inDes = document.getElementById('inputDesignacion').value
     var inApl = document.getElementById('inputAplicacion').value
     var inUbc = document.getElementById('inputUbicacion').value
-    var inAdq = document.getElementById('inputFormaAdquisicion').value
-    var inCant = document.getElementById('inputCantidad').value
+    
+    
    
     
       //Compruebo con condicional de que no haya campos vacíos excepto el de tel.
-    if (inMod == "" || inPart == "" || inDes == "" || inApl == "" || inUbc == "" || inAdq == "" || inCant == "") {
-        alert("¡Por favor, complete todos los campos requeridos!")
+    if (inMod == "" && inPart == "" && inDes == "" && inApl == "" && inUbc == "") {
+        alert("¡Por favor, complete el campo del criterio de búsqueda elegido!")
           return false;
     }
       return true;  

@@ -26,12 +26,13 @@ $operacion="ALTA REPUESTO";
      
 
 </head>
-<body>
+<body  onload="alert('¡Por favor, complete todos los campos para poder efectuar el ALTA del repuesto!')">
    
 
    <?php include 'plantillas/cabeza_cruds.php'; ?>
    <?php include 'plantillas/form_alta.php'; ?>
    <?php include 'plantillas/pie.php'; ?>
+
    
    <script src="js/alta.js"></script>
    

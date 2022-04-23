@@ -6,7 +6,22 @@ class CrudsRepuestos extends Conexion{
     public function __construct(){
           parent::__construct();
         }
-
+    public function InicioTrans(){
+        /* Metodo que habilita transacción manual*/
+        $ttion = $this->conn->begin_transaction();
+        ;
+        return $ttion;
+        }
+    public function OKTrans(){
+        /* Metodo que commitea los cruds efectuados*/
+        $ok = $this->conn->commit();
+        return $ok;
+        }
+    public function ErrTrans(){
+        /* Metodo que vuelve el proceso de cruds a cero */
+        $er = $this->conn->rollback();
+        return $er;
+            }    
     public function Ejecutar($sql){
         /* Metodo que ejecuta un query sql
         Retorna un resultado si es un SELECT*/

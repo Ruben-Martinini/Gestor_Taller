@@ -1,6 +1,6 @@
 <?php
 session_start();
-$operacion = "";
+$operacion = "Elija Repuesto";
 
 require("./Classes/Cruds_Repuestos.php");
 
@@ -16,22 +16,22 @@ $des = $_POST['designa'];
 $nuevaConexion = new CrudsRepuestos();
  
 if(isset($nro) && !empty($nro)){
-   $query = "SELECT r.id_repuesto , r.nro_parte , r.designacion , r.marca , d.dp1 , d.dp2 , d.dp3 FROM repuestos r, destino_repuestos d WHERE nro_parte like '$nro%' AND r.id_repuesto = d.repuesto_id  limit 200 ";
+   $query = "SELECT r.id_repuesto , r.nro_parte , r.designacion , r.marca , d.dp1 , d.dp2 , d.dp3 FROM repuestos r, destino_repuestos d WHERE nro_parte like '$nro%' AND r.id_repuesto = d.repuesto_id  limit 500 ";
    $resultado=$nuevaConexion->Ejecutar($query);
    
 
 } else if(isset($apl) && !empty($apl)){
-   $query = "SELECT r.id_repuesto , r.nro_parte , r.designacion , r.marca , d.dp1 , d.dp2 , d.dp3 FROM repuestos r, destino_repuestos d  WHERE aplicacion like '%$apl%' AND r.id_repuesto = d.repuesto_id limit 200";
+   $query = "SELECT r.id_repuesto , r.nro_parte , r.designacion , r.marca , d.dp1 , d.dp2 , d.dp3 FROM repuestos r, destino_repuestos d  WHERE aplicacion like '%$apl%' AND r.id_repuesto = d.repuesto_id limit 500";
    $resultado=$nuevaConexion->Ejecutar($query);
    
 
 } else if(isset($des) && !empty($des)){
-   $query = "SELECT r.id_repuesto , r.nro_parte , r.designacion , r.marca , d.dp1 , d.dp2 , d.dp3 FROM repuestos r, destino_repuestos d WHERE designacion like '%$des%' AND r.id_repuesto = d.repuesto_id limit 200 ";
+   $query = "SELECT r.id_repuesto , r.nro_parte , r.designacion , r.marca , d.dp1 , d.dp2 , d.dp3 FROM repuestos r, destino_repuestos d WHERE designacion like '%$des%' AND r.id_repuesto = d.repuesto_id limit 500 ";
    $resultado=$nuevaConexion->Ejecutar($query);
    
 
 }else if((isset($mar) && !empty($mar))){
-   $query = "SELECT r.id_repuesto , r.nro_parte , r.designacion , r.marca , d.dp1 , d.dp2 , d.dp3 FROM repuestos r, destino_repuestos d  WHERE marca like '$mar' AND r.id_repuesto = d.repuesto_id limit 200 ";
+   $query = "SELECT r.id_repuesto , r.nro_parte , r.designacion , r.marca , d.dp1 , d.dp2 , d.dp3 FROM repuestos r, destino_repuestos d  WHERE marca like '$mar' AND r.id_repuesto = d.repuesto_id limit 500 ";
    $resultado=$nuevaConexion->Ejecutar($query);
    
 }

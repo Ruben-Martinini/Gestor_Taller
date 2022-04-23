@@ -1,10 +1,16 @@
 <?php
-   session_start();
-   if(!isset($_SESSION['usuario'])){
-      header('location: index.php');
-      die();
-   }
-   $operacion="BUSCADOR";
+session_start();
+if(!isset($_SESSION['usuario'])){
+   header('location: index.php');
+   die();
+}
+$operacion="STOCKS";
+$id=$_GET['id'];
+$nro=$_GET['np'];
+$dep1=$_GET['d1'];
+$dep2=$_GET['d2'];
+$dep3=$_GET['d3'];
+$err=$_GET['e'];
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -13,7 +19,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Búsqueda de repuestos</title>
+    <title>Movimientos y control stocks</title>
      <!-- CSS only -->
      
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
@@ -26,13 +32,14 @@
      
 
 </head>
-<body onload="alert('¡Por favor realice la BUSQUEDA del repuesto a descargar o transferir a través de un solo criterio!')">
-
+<body>
+   
 
    <?php include 'plantillas/cabeza_cruds.php'; ?>
-   <?php include 'plantillas/form_buscar_ubicacion.php'; ?>
+   <?php include 'plantillas/form_desTran.php'; ?>
    <?php include 'plantillas/pie.php'; ?>
-    
-  
+   
+   <script src="js/descTransf.js"></script>
 </body>
+
 </html>

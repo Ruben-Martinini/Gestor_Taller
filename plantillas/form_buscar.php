@@ -1,6 +1,6 @@
 <!--Inicio de form Busqueda-->
 <section class="marco-principal">
-<form class="row g-3 cont-form-insert" action="listado.php"  method="POST">
+<form class="row g-3 cont-form-insert" action="listado.php" onsubmit="return validarB()"  method="POST">
 
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-secondary col-4 col-md-2 col-xl-2  " data-bs-toggle="modal" data-bs-target="#exampleModal" id="botonMarcaModelo" >

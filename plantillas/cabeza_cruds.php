@@ -18,9 +18,9 @@
                       Operaciones
                   </a>
                   <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                      <li><a class="dropdown-item" href="busqueda.php">Buscar Repuestos</a></li>
-                      <li><a class="dropdown-item" href="altas.php">Alta Repuestos</a></li>
-                      <li><a class="dropdown-item" href="busquedaXdestino.php">Buscar x Ubicación</a></li>
+                      <li><a class="dropdown-item" href="busqueda.php">Búsqueda</a></li>
+                      <li><a class="dropdown-item" href="altas.php">Alta</a></li>
+                      <li><a class="dropdown-item" href="busquedaXdestino.php">Descarga/Transf.</a></li>
                   </ul>
               </li>
                 

@@ -27,7 +27,6 @@
                   <th class="centrado" scope="col">DP2</th>
                   <th class="centrado" scope="col">DP3</th>
                   <th class="centrado" scope="col">Editar</th>
-                  <th class="centrado" scope="col">Eliminar</th>
                 </tr>
               </thead>
               <tbody>
@@ -45,11 +44,8 @@
                   <td class="centrado"><?php echo $tabla[4]; ?></td>
                   <td class="centrado"><?php echo $tabla[5]; ?></td>
                   <td class="centrado"><?php echo $tabla[6]; ?></td>
-                  <td class="centrado"><a href="edicion.php?id=<?php echo $tabla[0]; ?>" target="_SELF">
+                  <td class="centrado"><a href="descTransf.php?id=<?php echo $tabla[0]; ?>&np=<?php echo $tabla[1]; ?>&d1=<?php echo $tabla[4]; ?>&d2=<?php echo $tabla[5]; ?>&d3=<?php echo $tabla[6]; ?> " target="_SELF" >
                   <i class="far fa-edit"></i>
-                  </a></td>
-                  <td class="centrado"><a href="eliminar.php?id=<?php echo $tabla[0]; ?>" target="_SELF">
-                  <i class="far fa-trash-alt"></i>
                   </a></td>
               </tr>
               <?php   }
