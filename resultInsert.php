@@ -155,7 +155,7 @@ $resul=$nuevaConexion->Ejecutar($query0);
             $resul1=$nuevaConexion->Ejecutar($query1);
 
                 if($resul1){
-                    $query2="INSERT INTO orden_compra( repuesto_id, usuario_id , nro_oc) VALUES ('$idR','$usu','$fad') ";
+                    $query2="INSERT INTO orden_compra( repuesto_id, usuario_id , nro_oc, cant_ingresada) VALUES ('$idR','$usu','$fad','$can') ";
                     $resul2=$nuevaConexion->Ejecutar($query2);
                         
                             if($resul2){

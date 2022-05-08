@@ -178,7 +178,7 @@ $resul=$nuevaConexion->Ejecutar($query);
 
                     if($resulIdOc){
        
-                    $query3=" UPDATE orden_compra SET nro_oc = '$oc' WHERE id_oc = '$idOc' ";
+                    $query3=" UPDATE orden_compra SET nro_oc = '$oc', cant_ingresada = '$can' WHERE id_oc = '$idOc' ";
         
                     $resul3=$nuevaConexion->Ejecutar($query3);
     
