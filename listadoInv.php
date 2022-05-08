@@ -37,7 +37,7 @@ if(isset($nro) && !empty($nro)){
 }else if((isset($ubc) && !empty($ubc))){
    $query = " SELECT r.id_repuesto , r.nro_parte , r.designacion , r.aplicacion , r.ubicacion , r.marca , m.SPORTMAN_500_4x2 , m.SPORTMAN_500_4x4 , m.SPORTMAN_570_4x4 , m.RANGER_700_4x4 , m.RANGER_700_6x6 , 
    m.RANGER_900_4x4 , m.IQ_600, m.LX_500 , m.LX_550 , m.120_PRO , m.25HP_2CYL , m.40HP_2CYL , m.40HP_3CYL , m.50HP_2CYL , m.50HP_3CYL , m.150HP_6CYL , m.U1000 , m.U2000 , m.EG6500 , m.ET12000 , m.WB_20XH , m.WB_20XT , 
-   (d.dp1 + d.dp2 + d.dp3)cantidad  FROM repuestos r, destino_repuestos d, modelo_repuesto m WHERE ubicacion like '$ubc' AND r.id_repuesto = d.repuesto_id  AND r.id_repuesto = m.repuesto_id limit 500 ";
+   (d.dp1 + d.dp2 + d.dp3)cantidad  FROM repuestos r, destino_repuestos d, modelo_repuesto m WHERE ubicacion like '%$ubc%' AND r.id_repuesto = d.repuesto_id  AND r.id_repuesto = m.repuesto_id limit 500 ";
    $resultado=$nuevaConexion->Ejecutar($query);
    
 }else if((isset($mar) && !empty($mar))){
