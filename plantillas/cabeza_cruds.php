@@ -19,8 +19,9 @@
                   </a>
                   <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                       <li><a class="dropdown-item" href="busqueda.php">Búsqueda</a></li>
-                      <li><a class="dropdown-item" href="altas.php">Alta</a></li>
+                      <li><a class="dropdown-item" href="busquedaXcarga.php">Carga</a></li>
                       <li><a class="dropdown-item" href="busquedaXdestino.php">Descarga/Transf.</a></li>
+                      <li><a class="dropdown-item" href="altas.php">Alta</a></li>
                   </ul>
               </li>
                 
