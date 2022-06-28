@@ -20,11 +20,12 @@
               <thead>
                 <tr>
                   <th class="centrado" scope="col">id Repuesto</th>
-                  <th  scope="col">N° de Parte</th>
+                  <th scope="col">N° de Parte</th>
                   <th scope="col">Designación</th>
                   <th scope="col">Aplicación</th>
-                  <th class="centrado" scope="col">Ubicación</th>
+                  <!-- <th class="centrado" scope="col">Ubicación</th> -->
                   <th  scope="col">Marca</th>
+                  <th  scope="col">Modelo</th>
                   <th class="centrado" scope="col">Stock</th>
                   <th class="centrado" scope="col">Editar</th>
                   <th class="centrado" scope="col">Eliminar</th>
@@ -41,10 +42,38 @@
                   
                   <td><?php echo $tabla[1]; ?></td>
                   <td><?php echo $tabla[2]; ?></td>
-                  <td><?php echo $tabla[3]; ?></td>
-                  <td class="centrado"><?php echo $tabla[4]; ?></td>
-                  <td><?php echo $tabla[5]; ?></td>
-                  <td class="centrado"><?php echo $tabla[6]; ?></td>
+                  <td><?php echo $tabla[3]; ?></td>      
+                  <td><?php echo $tabla[4]; ?></td>
+                  <td><?php  
+                    
+                    //impresión de modelos polaris
+                    if($tabla[5]==1){echo "S500.4x2|";} 
+                    if($tabla[6]==1){echo "S500.4x4|";}
+                    if($tabla[7]==1){echo "S570.4x4|";}
+                    if($tabla[8]==1){echo "R700.4x4|";}
+                    if($tabla[9]==1){echo "R700.6x6|";}
+                    if($tabla[10]==1){echo "R900.4x4|";}
+                    if($tabla[11]==1){echo "IQ|";}
+                    if($tabla[12]==1){echo "LX500|";}
+                    if($tabla[13]==1){echo "LX550|";}
+                    if($tabla[14]==1){echo "120Pro|";}
+                    //impresión de modelos mercury
+                    if($tabla[15]==1){echo "25HP|";} 
+                    if($tabla[16]==1){echo "40HP.2C|";}
+                    if($tabla[17]==1){echo "40HP.3C|";}
+                    if($tabla[18]==1){echo "50HP.2C|";}
+                    if($tabla[19]==1){echo "50HP.3C|";}
+                    if($tabla[20]==1){echo "150HP.6C|";}
+                    //impresión de modelos Honda
+                    if($tabla[21]==1){echo "U1000|";}
+                    if($tabla[22]==1){echo "U2000|";}
+                    if($tabla[23]==1){echo "EG6500|";}
+                    if($tabla[24]==1){echo "Et12000|";}
+                    if($tabla[25]==1){echo "WB20XH|";}
+                    if($tabla[26]==1){echo "WB20XT|";}
+                  
+                  ?></td>
+                  <td class="centrado"><?php echo $tabla[27]; ?></td>
                   <td class="centrado"><a href="#" target="_SELF">
                   <i class="far fa-edit"></i>
                   </a></td>
@@ -64,3 +93,5 @@
       
     </section>
     <!-- fin de listado de resultados -->
+
+               

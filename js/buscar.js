@@ -110,3 +110,22 @@ function validarB() {
     }
       return true;  
   }
+  function validarC() {
+    //obtengo los valores de los campos del formulario de alta
+      
+    var inMod = document.getElementById('inputModelo').value
+    var inPart = document.getElementById('inputNparte').value
+    var inDes = document.getElementById('inputDesignacion').value
+    var inApl = document.getElementById('inputAplicacion').value
+    //var inUbc = document.getElementById('inputUbicacion').value
+    
+    
+   
+    
+      //Compruebo con condicional de que no haya campos vacíos excepto el de tel.
+    if (inMod == "" && inPart == "" && inDes == "" && inApl == "") {
+        alert("¡Por favor, complete el campo del criterio de búsqueda elegido!")
+          return false;
+    }
+      return true;  
+  }

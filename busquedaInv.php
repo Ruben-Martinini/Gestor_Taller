@@ -26,13 +26,17 @@
      
 
 </head>
-<body>
+<body onload="alert('¡Por favor realice la BUSQUEDA  a través de un solo criterio!')">
 
 
    <?php include 'plantillas/cabezaInv.php'; ?>
    <?php include 'plantillas/form_buscarInv.php'; ?>
    <?php include 'plantillas/pie.php'; ?>
-    
+   
+   <script src="js/buscar.js"></script> 
   
 </body>
 </html>
+
+
+ 
